@@ -1,0 +1,203 @@
+.site-header {
+    padding: 25px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.site-header .brand-logo {
+    width: 110px;
+    height: auto;
+}
+
+.main-nav {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    color: #333d51;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.main-nav .nav-item {
+    text-decoration: none;
+    padding-bottom: 3px;
+    border-bottom: 3px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.main-nav .nav-item:hover {
+    border-bottom-color: #f75c03;
+}
+
+.main-nav .current-page {
+    border-bottom-color: #f75c03;
+    color: #f75c03;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+/* No direct img styling needed here for general icons, as they are now SVGs within IconButton */
+/* You might want to adjust the IconButton's default padding/margin if needed */
+.header-actions .MuiIconButton-root {
+    padding: 0; /* Remove default padding if it interferes with your layout */
+    color: inherit; /* Ensure icon color is inherited or set explicitly in JS */
+}
+
+
+.cart-icon-wrapper{
+    position: relative;
+    /* Ensure the Link itself doesn't add extra padding */
+    display: flex; /* Helps align the icon and dot if Link acts as container */
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-icon-wrapper .cart-dot{
+    position: absolute;
+    min-width: 12px;
+    min-height: 12px;
+    background-color: #e5383b;
+    border-radius: 6px;
+    top: -6px;
+    right: -6px; /* Adjusted based on the icon's position */
+    border: 1.5px solid #ffffff;
+}
+
+.header-actions button {
+    background: transparent;
+    font-size: 17px;
+    color: #333d51;
+    border: 1.5px solid #f75c03;
+    padding: 12px 35px;
+    border-radius: 60px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.header-actions button:hover {
+    background: #f75c03;
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-profile-menu{
+    position: relative;
+}
+
+.profile-dropdown{
+    position: absolute;
+    display: none;
+    right: 0;
+    z-index: 2;
+    min-width: 150px;
+}
+.profile-dropdown li{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    padding: 8px 15px;
+    border-radius: 3px;
+}
+/* No img styling needed for dropdown icons as they are now MUI components */
+/* .profile-dropdown img{
+    width: 22px;
+} */
+.profile-dropdown li:hover{
+    background-color: #ffe0d8;
+    color: #f75c03;
+}
+.user-profile-menu:hover .profile-dropdown{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background-color: #ffffff;
+    padding: 15px 20px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    list-style: none;
+}
+.dropdown-separator{
+    background-color: #eeeeee;
+    height: 1px;
+    border: none;
+    margin: 5px 0;
+}
+
+@media (max-width:1050px) {
+    .site-header .brand-logo {
+        width: 120px;
+    }
+
+    .main-nav {
+        gap: 18px;
+        font-size: 16px;
+    }
+
+    .header-actions {
+        gap: 35px;
+    }
+
+    /* Adjust icon size for smaller screens using the style prop or by targeting SVG */
+    .header-actions .MuiSvgIcon-root {
+        font-size: 20px !important; /* Override inline style or target specifically */
+    }
+
+    .header-actions button {
+        padding: 10px 30px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width:900px) {
+    .site-header .brand-logo {
+        width: 100px;
+    }
+
+    .main-nav {
+        gap: 12px;
+        font-size: 15px;
+    }
+
+    .header-actions {
+        gap: 25px;
+    }
+
+    .header-actions .MuiSvgIcon-root {
+        font-size: 18px !important;
+    }
+
+    .header-actions button {
+        font-size: 14px;
+        padding: 9px 25px;
+    }
+}
+
+@media (max-width:750px) {
+    .main-nav {
+        display: none;
+    }
+    .site-header {
+        padding: 15px 0;
+    }
+    .header-actions {
+        gap: 15px;
+    }
+    .header-actions button {
+        padding: 8px 20px;
+        font-size: 13px;
+    }
+    .site-header .brand-logo {
+        width: 90px;
+    }
+    .header-actions .MuiSvgIcon-root {
+        font-size: 16px !important;
+    }
+}

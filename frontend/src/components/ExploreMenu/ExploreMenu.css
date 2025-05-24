@@ -1,0 +1,94 @@
+.toy-explore-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 40px 0;
+  padding: 0 20px;
+}
+
+.toy-explore-menu h1 {
+  font-size: 2rem;
+  color: #ff5e57;
+  text-align: center;
+  font-weight: 700;
+}
+
+.toy-explore-menu-text {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #5a5a5a;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.toy-explore-menu-list {
+  display: flex;
+  gap: 20px;
+  margin: 30px 0;
+  overflow-x: auto;
+  padding: 10px 0;
+  scroll-behavior: smooth;
+  justify-content: flex-start;
+}
+
+.toy-explore-menu-list::-webkit-scrollbar {
+  display: none;
+}
+
+.toy-explore-menu-item {
+  flex: 0 0 auto;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.toy-explore-menu-item:hover {
+  transform: scale(1.05);
+}
+
+.toy-explore-menu-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  background-color: #fff5f5;
+  padding: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: border 0.3s;
+}
+
+.toy-explore-menu-item.active img {
+  border: 3px solid #ff5e57;
+  background-color: #ffecec;
+}
+
+.toy-explore-menu-item p {
+  margin-top: 10px;
+  color: #444;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.toy-explore-menu hr {
+  margin-top: 10px;
+  border: none;
+  height: 2px;
+  background-color: #f1c9c1;
+}
+
+@media (max-width: 768px) {
+  .toy-explore-menu h1 {
+    font-size: 1.5rem;
+  }
+
+  .toy-explore-menu-text {
+    font-size: 0.95rem;
+  }
+
+  .toy-explore-menu-item img {
+    width: 65px;
+    height: 65px;
+  }
+}

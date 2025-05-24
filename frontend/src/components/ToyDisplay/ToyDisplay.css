@@ -1,0 +1,16 @@
+.toy-display {
+  padding: 30px 20px;
+}
+
+.toy-display h2 {
+  font-size: 2rem;
+  color: #ff5e57;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.toy-display-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
